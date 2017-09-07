@@ -42,16 +42,17 @@
     "iron-icon": "PolymerElements/iron-icon#^v2.0.0",
     "paper-styles": "PolymerElements/paper-styles#^v2.0.0",
     "iron-component-page": "^v2.0.0",
-    "elements-demo-resources": "v2.0.0",
     "iron-ajax": "PolymerElements/iron-ajax#^v2.0.0",
-    "app-localize-behavior": "^v2.0.0"
+    "app-localize-behavior": "^v2.0.0",
+    "vaadin-demo-helpers": "vaadin/vaadin-demo-helpers"
   },
   "dependencies": {
     "polymer": "^2.0.0",
     "iron-resizable-behavior": "PolymerElements/iron-resizable-behavior#^v2.0.0",
     "iron-scroll-target-behavior": "PolymerElements/iron-scroll-target-behavior#^v2.0.0",
     "iron-a11y-keys-behavior": "^v2.0.0",
-    "iron-a11y-announcer": "^v2.0.0"
+    "iron-a11y-announcer": "^v2.0.0",
+    "vaadin-themable-mixin": "#propagate-theme"
   },
   "variants": {
     "1.x": {
@@ -66,5 +67,8 @@
         "webcomponentsjs": "^0.7.24"
       }
     }
+  },
+  "resolutions": {
+    "vaadin-themable-mixin": "propagate-theme"
   }
 }

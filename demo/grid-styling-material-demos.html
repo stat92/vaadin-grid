@@ -1,35 +1,16 @@
-<!doctype html>
-<html>
+<dom-module id="grid-styling-material-demos">
+  <template>
+    <style>
+       :host {
+        display: block;
+      }
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    </style>
 
-  <title>vaadin-grid – Styling: Material Design</title>
-
-  <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
-
-  <link rel="import" href="common.html">
-  <link rel="import" href="../vaadin-grid-selection-column.html">
-  <link rel="import" href="../../paper-checkbox/paper-checkbox.html">
-  <link rel="import" href="../../iron-icon/iron-icon.html">
-  <link rel="import" href="../../iron-icons/iron-icons.html">
-  <link rel="import" href="../../paper-styles/color.html">
-  <link rel="import" href="../vaadin-grid-sorter.html">
-  <link rel="import" href="../vaadin-grid-filter.html">
-  <link rel="import" href="../vaadin-grid-column-group.html">
-
-</head>
-
-<body unresolved>
-
-  <div class="vertical-section-container centered">
-    <demo-navigation></demo-navigation>
 
     <h3>Material Design</h3>
-    <demo-snippet>
-      <template>
+    <vaadin-demo-snippet id='grid-styling-material-demos-material-design'>
+      <template preserve-content>
         <dom-bind>
           <template is="dom-bind">
             <custom-style>
@@ -178,9 +159,15 @@
         </dom-bind>
 
       </template>
-    </demo-snippet>
+    </vaadin-demo-snippet>
 
   </div>
-</body>
 
-</html>
+  </template>
+  <script>
+    class GridStylingMaterialDemos extends DemoReadyEventEmitter(GridDemo(Polymer.Element)) {
+      static get is() { return 'grid-styling-material-demos'; }
+    }
+    customElements.define(GridStylingMaterialDemos.is, GridStylingMaterialDemos);
+  </script>
+</dom-module>
