@@ -161,21 +161,23 @@
             </vaadin-grid>
           </template>
           <script>
-            var scope = document.querySelector('#transparent-template');
-            if (Polymer.Element) {
-              scope = scope.parentElement;
-            }
-
-            scope._activeItemChanged = function(e) {
-              var grid = e.target;
-              this._clickedItem = grid.activeItem ? grid.activeItem : this._clickedItem;
-
-              if (grid.expandedItems.indexOf(this._clickedItem) > -1) {
-                grid.collapseItem(this._clickedItem);
-              } else {
-                grid.expandItem(this._clickedItem);
+            window.addEventListener('WebComponentsReady', function() {
+              var scope = document.querySelector('#transparent-template');
+              if (Polymer.Element) {
+                scope = scope.parentElement;
               }
-            };
+
+              scope._activeItemChanged = function(e) {
+                var grid = e.target;
+                this._clickedItem = grid.activeItem ? grid.activeItem : this._clickedItem;
+
+                if (grid.expandedItems.indexOf(this._clickedItem) > -1) {
+                  grid.collapseItem(this._clickedItem);
+                } else {
+                  grid.expandItem(this._clickedItem);
+                }
+              };
+            });
           </script>
         </dom-bind>
       </template>
